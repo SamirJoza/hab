@@ -1,0 +1,71 @@
+ /* Import Google fonts */
+ @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap');
+
+/**
+ * Variables
+ */
+$primary: #63a375;
+$brand-1: #63A375;
+$brand-2: #FAF5E8;
+$brand-3: #daa05b;
+$brand-4: #1e201f;
+
+
+$theme-colors: (
+  primary: #63a375,
+  secondary: $brand-3,
+  brand-1: #63A375,
+  brand-2: #FAF5E8,
+  brand-3: #daa05b,
+  brand-4: $brand-4,
+  light: $brand-2,
+);
+
+/* Font Sizes */
+$font-size-base: 1.125rem; // 18px
+
+$h1-font-size:                $font-size-base * 3.052;
+$h2-font-size:                $font-size-base * 2.441;
+$h3-font-size:                $font-size-base * 1.953;
+$h4-font-size:                $font-size-base * 1.563;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base * 1.056;
+
+/* Modifying Fontsize Map */
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $font-size-base * 0.8,
+);
+
+/* Body Background color */
+$body-bg: $brand-2;
+
+/* Spacers */
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 5.500,
+  7: $spacer * 6.250,
+);
+
+/** Gutters */
+$grid-gutter-width: 1.5rem;
+$gutters: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 5,
+);

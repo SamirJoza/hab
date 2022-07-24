@@ -1,0 +1,14 @@
+
+body { font-family: "PT Sans"}
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {font-family: "PT Serif"}
+.display {font-family: "PT Serif"}
+.image-container {
+  background-repeat: no-repeat;
+  background-size: 50% !important;
+}
+.acf-block-preview {
+  .hide-admin {
+    display: none;
+  }
+}

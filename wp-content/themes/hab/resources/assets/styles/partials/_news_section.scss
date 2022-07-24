@@ -1,0 +1,33 @@
+.wp-block-in-the-news {
+  
+  @include media-breakpoint-up(sm) {
+    .col {
+      border-left: 1px solid #fefefe;
+      border-right: 1px solid #fefefe;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  .card, .card-footer {
+    background: transparent;
+    border: none;
+  }
+  h5 {
+    font-family: "PT Sans";
+  }
+
+  a{
+    text-decoration: none;
+
+    &::after {
+      content: ">";
+      margin-left: 5px;
+    }
+  }
+}

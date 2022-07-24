@@ -1,0 +1,19 @@
+/*
+
+# Whitelist some files
+!.gitignore
+!README.md
+
+# Ignore all files named .DS_Store or ending with .log
+**/.DS_Store
+**.log
+node_modules
+.yarn
+
+
+
+!wp-content
+wp-content/*
+!wp-content/mu-plugins
+!wp-content/themes
+!wp-content/themes/hab

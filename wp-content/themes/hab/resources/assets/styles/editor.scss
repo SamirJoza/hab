@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap');
+
+/**
+ * Variables
+ */
+ $primary: #63a375;
+ $brand-1: #63A375;
+ $brand-2: #FAF5E8;
+ $brand-3: #daa05b;
+ $brand-4: #1e201f;
+ $white: #fff;
+ $light: #fefefe;
+ 
+
+
+.edit-post-visual-editor {
+
+  @import 'app';
+
+  .wp-block-in-the-news {
+    .card {
+      color: #ffffff;
+
+      h5 {
+        color: #daa05b !important;
+      }
+    }
+  }
+  .wp-block-container.bg-brand-light {
+    background-color: #f0f7fc !important;
+  }
+
+  :where(.wp-block) {
+    max-width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .shadow {
+    box-shadow: 2px 12px 0 #e7e7e7;
+  }
+
+  .rounded {
+    border-radius: 10px;
+  }
+
+  .acf-hl > li {
+    margin: 0 !important;
+  }
+}
+
+.wp-block-button,
+.btn {
+  border: 0.111rem solid transparent;
+  border-radius: 2rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.95rem 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn-secondary {
+  background-color: $brand-3;
+  color: $light;
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: $light;
+}
+
+.is-style-btn-secondary {
+  .wp-block-button__link {
+    background-color: $brand-3;
+    color: $light;
+  }
+}
+
+.is-style-btn-primary {
+  .wp-block-button__link {
+    background-color: $primary;
+    color: $light;
+  }
+}
+
+.is-style-btn-link {
+  .wp-block-button__link {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: $primary;
+
+    &:after {
+      content: ">";
+      margin-left: 2px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "site-features",
+  "version": "0.0.1",
+  "description": "",
+  "main": "webpack.mix.js",
+  "scripts": {
+    "start": "npx mix watch",
+    "build": "bash build.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "laravel-mix": "^6.0.24",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "postcss": "^8.3.5",
+    "postcss-custom-properties": "^11.0.0",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0"
+  }
+}

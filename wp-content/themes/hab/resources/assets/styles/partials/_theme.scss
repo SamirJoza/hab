@@ -1,0 +1,109 @@
+@each $color, $value in $theme-colors {
+  .sidemarker-#{$color},
+  .is-style-sidemarker-#{$color} {
+    position: relative;
+    &::before {
+      display: block;
+      content: "";
+      position:absolute;
+      left: -1rem;
+      top: 0;
+      bottom: 0;
+      border-left: 3px solid $value;
+    }
+  }
+  /* Normal Rounded Buttons */
+  .is-style-btn-#{$color} {
+    .wp-block-button__link {
+      margin-top: 3rem;
+      text-decoration: none;
+      border: 0.111rem solid transparent;
+      border-radius: 2rem;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1;
+      padding: 0.95rem 1.4rem;
+      text-align: center;
+      text-decoration: none;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: $light;
+      background-color: $value;
+
+      &:hover {
+        background-color: transparent;
+        border-color: $value;
+        color: $value;
+      }
+    }
+  }
+  
+  .is-style-button-outline-#{$color} {
+    
+    .wp-block-button__link {
+      margin-top: 3rem;
+      text-decoration: none;
+      border: 0.111rem solid $value;
+      border-radius: 2rem;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1;
+      padding: 0.95rem 1.4rem;
+      text-align: center;
+      text-decoration: none;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: $value;
+      background-color: transparent;
+
+      &:hover {
+        background-color: $value;
+        color: invert($value);
+      }
+    }
+  }
+
+  /* Outline Buttons*/
+  .button-outline-#{$color} {
+    border-radius: 4px;
+    font-weight: 400;
+    text-transform: none;
+    padding-top: 0.556rem;
+    padding-bottom: 0.556rem;
+    padding-left: 1.111rem;
+    padding-right: 1.111rem;
+    border: 1px solid $value;
+    color: $value;
+    font-size: 0.889rem;
+    text-decoration: none;
+
+    &:hover {
+      background: $value;
+      color: $white;
+    }
+  }
+}
+
+.hide_mobile {
+  @include media-breakpoint-down(lg) { 
+    background-image: none !important;
+  }
+  
+  img {
+    object-fit: contain;
+  }
+}

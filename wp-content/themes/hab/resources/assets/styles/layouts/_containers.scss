@@ -1,0 +1,12 @@
+.innerblock-wrap {
+  overflow: visible;
+
+  .container {
+    padding: 0;
+  }
+}
+
+.bg-full-width,
+.bg-default-width .innerblock-wrap {
+  background-repeat: no-repeat;
+}

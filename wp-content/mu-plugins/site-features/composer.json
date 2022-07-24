@@ -1,0 +1,19 @@
+{
+    "name": "samirjoza/site_features",
+    "type": "project",
+    "require": {
+        "stoutlogic/acf-builder": "^1.11"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3",
+        "brain/monkey": "^2.6.1"
+    },
+    "autoload-dev": {
+        "classmap": [
+            "includes/"
+        ]
+    },
+    "scripts": {
+        "phpunit" : "vendor/bin/phpunit"
+    }
+}

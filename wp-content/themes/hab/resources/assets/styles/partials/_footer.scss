@@ -1,0 +1,45 @@
+footer.page-footer {
+  font-size: 1rem;
+  @extend .py-3;
+
+  div[itemprop="address"] {
+    font-size: 16px;
+
+    span[itemprop="telephone"] {
+      display: block;
+    }
+  }
+}
+
+#menu-footer {
+  li {
+    display: inline-block;
+    @extend .px-3;
+    border-right: 1px solid $white;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-buttons {
+  li {
+    @extend .px-1;
+  }
+}
+
+.socials {
+  li {
+    @extend .px-1;
+    a {
+      @extend .text-white;
+      font-size: 30px;
+    }
+  }
+}
