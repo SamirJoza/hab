@@ -31,7 +31,7 @@ class Container extends Block {
      *
      * @var string
      */
-    public $category = 'formatting';
+    public $category = 'hab-blocks';
 
     /**
      * The block icon.
