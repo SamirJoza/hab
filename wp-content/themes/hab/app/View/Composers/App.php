@@ -30,6 +30,7 @@ class App extends Composer
             'footerLogo' => $this->get_the_footerLogo(),
             'headerLogo' => $this->get_the_headerLogo(),
             'footerButton' => $this->get_footer_button(),
+            'featuredImage' => $this->get_FeaturedImage(),
         ];
     }
 
@@ -133,6 +134,14 @@ class App extends Composer
     public function siteName()
     {
         return get_bloginfo('name', 'display');
+    }
+
+
+    public function get_FeaturedImage() {
+        if ( has_post_thumbnail() ) {
+            return get_the_post_thumbnail_url(get_the_ID(),'full');
+        }
+        return false;
     }
 
     /**

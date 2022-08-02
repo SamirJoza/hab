@@ -1,9 +1,6 @@
 body.home {
   .site-header {
-    background-repeat:no-repeat;
-    background-size: cover;
     background-image: url(../images/forest.background_header.torn.png);
-    background-position: bottom center;
     height: 74vh;
 
     .header-inner{
@@ -15,15 +12,6 @@ body.home {
         background-position-y: center;
       }
       height: 100%;
-
-      .navbar {
-        background: green;
-        min-height: 25%;
-        background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(153,153,153,0) 60%,rgba(255,255,255,0) 100%);
-        a {
-          color: $white;
-        }
-      }
     }
   }
 }
