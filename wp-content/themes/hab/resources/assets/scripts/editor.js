@@ -26,4 +26,18 @@ domReady(() => {
     name: 'sidemarker-brand-3',
     label: 'Side Marker Orange',
   });
+  registerBlockStyle('core/image', {
+    name: 'ms-xl-n50',
+    label: 'Pull out left',
+  });
+
+  acf.add_filter('color_picker_args', function( args, field ){
+
+    // do something to args
+    args.palettes = ['#1E201F', '#FFFFFF', '#F2F2F2','#FAF5E8','#DAA05B','#63A375']
+
+    // return
+    return args;
+
+});
 });
