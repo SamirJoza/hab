@@ -41,6 +41,16 @@ _wordpress_dom_ready__WEBPACK_IMPORTED_MODULE_1___default()(function () {
     name: 'sidemarker-brand-3',
     label: 'Side Marker Orange'
   });
+  Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockStyle"])('core/image', {
+    name: 'ms-xl-n50',
+    label: 'Pull out left'
+  });
+  acf.add_filter('color_picker_args', function (args, field) {
+    // do something to args
+    args.palettes = ['#1E201F', '#FFFFFF', '#F2F2F2', '#FAF5E8', '#DAA05B', '#63A375']; // return
+
+    return args;
+  });
 });
 
 /***/ }),

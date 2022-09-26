@@ -98,6 +98,10 @@
   }
 }
 
+.has-text-align-center {
+  @extend .text-center;
+}
+
 .hide_mobile {
   @include media-breakpoint-down(lg) { 
     background-image: none !important;
@@ -105,5 +109,10 @@
   
   img {
     object-fit: contain;
+  }
+}
+.is-style-ms-xl-n50 {
+  @media (min-width: 1200px) {
+    margin-left: -50px;
   }
 }
