@@ -2318,7 +2318,7 @@ a > .edit-post-visual-editor code {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.edit-post-visual-editor .btn-check[disabled] + .btn, .edit-post-visual-editor .btn-check:disabled + .btn {
+.edit-post-visual-editor .btn-check[disabled] + .btn, .edit-post-visual-editor .btn-check[disabled] + .gform_button, .edit-post-visual-editor .btn-check:disabled + .btn, .edit-post-visual-editor .btn-check:disabled + .gform_button {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2493,11 +2493,11 @@ a > .edit-post-visual-editor code {
 .edit-post-visual-editor .input-group > .form-select:focus {
   z-index: 3;
 }
-.edit-post-visual-editor .input-group .btn {
+.edit-post-visual-editor .input-group .btn, .edit-post-visual-editor .input-group .gform_button {
   position: relative;
   z-index: 2;
 }
-.edit-post-visual-editor .input-group .btn:focus {
+.edit-post-visual-editor .input-group .btn:focus, .edit-post-visual-editor .input-group .gform_button:focus {
   z-index: 3;
 }
 .edit-post-visual-editor .input-group-text {
@@ -2517,7 +2517,8 @@ a > .edit-post-visual-editor code {
 .edit-post-visual-editor .input-group-lg > .form-control,
 .edit-post-visual-editor .input-group-lg > .form-select,
 .edit-post-visual-editor .input-group-lg > .input-group-text,
-.edit-post-visual-editor .input-group-lg > .btn {
+.edit-post-visual-editor .input-group-lg > .btn,
+.edit-post-visual-editor .input-group-lg > .gform_button {
   padding: 0.5rem 1rem;
   font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 0.3rem;
@@ -2526,14 +2527,16 @@ a > .edit-post-visual-editor code {
   .edit-post-visual-editor .input-group-lg > .form-control,
 .edit-post-visual-editor .input-group-lg > .form-select,
 .edit-post-visual-editor .input-group-lg > .input-group-text,
-.edit-post-visual-editor .input-group-lg > .btn {
+.edit-post-visual-editor .input-group-lg > .btn,
+.edit-post-visual-editor .input-group-lg > .gform_button {
     font-size: 1.40625rem;
   }
 }
 .edit-post-visual-editor .input-group-sm > .form-control,
 .edit-post-visual-editor .input-group-sm > .form-select,
 .edit-post-visual-editor .input-group-sm > .input-group-text,
-.edit-post-visual-editor .input-group-sm > .btn {
+.edit-post-visual-editor .input-group-sm > .btn,
+.edit-post-visual-editor .input-group-sm > .gform_button {
   padding: 0.25rem 0.5rem;
   font-size: 0.984375rem;
   border-radius: 0.2rem;
@@ -2715,7 +2718,7 @@ a > .edit-post-visual-editor code {
 .edit-post-visual-editor .input-group .form-select.is-invalid:focus {
   z-index: 3;
 }
-.edit-post-visual-editor .btn {
+.edit-post-visual-editor .btn, .edit-post-visual-editor .gform_button {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -2735,46 +2738,46 @@ a > .edit-post-visual-editor code {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .edit-post-visual-editor .btn {
+  .edit-post-visual-editor .btn, .edit-post-visual-editor .gform_button {
     transition: none;
   }
 }
-.edit-post-visual-editor .btn:hover {
+.edit-post-visual-editor .btn:hover, .edit-post-visual-editor .gform_button:hover {
   color: #212529;
 }
-.btn-check:focus + .edit-post-visual-editor .btn, .edit-post-visual-editor .btn:focus {
+.btn-check:focus + .edit-post-visual-editor .btn, .btn-check:focus + .edit-post-visual-editor .gform_button, .edit-post-visual-editor .btn:focus, .edit-post-visual-editor .gform_button:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(99, 163, 117, 0.25);
 }
-.edit-post-visual-editor .btn:disabled, .edit-post-visual-editor .btn.disabled, fieldset:disabled .edit-post-visual-editor .btn {
+.edit-post-visual-editor .btn:disabled, .edit-post-visual-editor .gform_button:disabled, .edit-post-visual-editor .btn.disabled, .edit-post-visual-editor .disabled.gform_button, fieldset:disabled .edit-post-visual-editor .btn, fieldset:disabled .edit-post-visual-editor .gform_button {
   pointer-events: none;
   opacity: 0.65;
 }
-.edit-post-visual-editor .btn-primary {
+.edit-post-visual-editor .btn-primary, .edit-post-visual-editor .gform_button {
   color: #000;
   background-color: #63a375;
   border-color: #63a375;
 }
-.edit-post-visual-editor .btn-primary:hover {
+.edit-post-visual-editor .btn-primary:hover, .edit-post-visual-editor .gform_button:hover {
   color: #000;
   background-color: #7ab18a;
   border-color: #73ac83;
 }
-.btn-check:focus + .edit-post-visual-editor .btn-primary, .edit-post-visual-editor .btn-primary:focus {
+.btn-check:focus + .edit-post-visual-editor .btn-primary, .btn-check:focus + .edit-post-visual-editor .gform_button, .edit-post-visual-editor .btn-primary:focus, .edit-post-visual-editor .gform_button:focus {
   color: #000;
   background-color: #7ab18a;
   border-color: #73ac83;
   box-shadow: 0 0 0 0.25rem rgba(84, 139, 99, 0.5);
 }
-.btn-check:checked + .edit-post-visual-editor .btn-primary, .btn-check:active + .edit-post-visual-editor .btn-primary, .edit-post-visual-editor .btn-primary:active, .edit-post-visual-editor .btn-primary.active, .show > .edit-post-visual-editor .btn-primary.dropdown-toggle {
+.btn-check:checked + .edit-post-visual-editor .btn-primary, .btn-check:checked + .edit-post-visual-editor .gform_button, .btn-check:active + .edit-post-visual-editor .btn-primary, .btn-check:active + .edit-post-visual-editor .gform_button, .edit-post-visual-editor .btn-primary:active, .edit-post-visual-editor .gform_button:active, .edit-post-visual-editor .btn-primary.active, .edit-post-visual-editor .active.gform_button, .show > .edit-post-visual-editor .btn-primary.dropdown-toggle, .show > .edit-post-visual-editor .dropdown-toggle.gform_button {
   color: #000;
   background-color: #82b591;
   border-color: #73ac83;
 }
-.btn-check:checked + .edit-post-visual-editor .btn-primary:focus, .btn-check:active + .edit-post-visual-editor .btn-primary:focus, .edit-post-visual-editor .btn-primary:active:focus, .edit-post-visual-editor .btn-primary.active:focus, .show > .edit-post-visual-editor .btn-primary.dropdown-toggle:focus {
+.btn-check:checked + .edit-post-visual-editor .btn-primary:focus, .btn-check:checked + .edit-post-visual-editor .gform_button:focus, .btn-check:active + .edit-post-visual-editor .btn-primary:focus, .btn-check:active + .edit-post-visual-editor .gform_button:focus, .edit-post-visual-editor .btn-primary:active:focus, .edit-post-visual-editor .gform_button:active:focus, .edit-post-visual-editor .btn-primary.active:focus, .edit-post-visual-editor .active.gform_button:focus, .show > .edit-post-visual-editor .btn-primary.dropdown-toggle:focus, .show > .edit-post-visual-editor .dropdown-toggle.gform_button:focus {
   box-shadow: 0 0 0 0.25rem rgba(84, 139, 99, 0.5);
 }
-.edit-post-visual-editor .btn-primary:disabled, .edit-post-visual-editor .btn-primary.disabled {
+.edit-post-visual-editor .btn-primary:disabled, .edit-post-visual-editor .gform_button:disabled, .edit-post-visual-editor .btn-primary.disabled, .edit-post-visual-editor .disabled.gform_button {
   color: #000;
   background-color: #63a375;
   border-color: #63a375;
@@ -3132,17 +3135,17 @@ a > .edit-post-visual-editor code {
 .edit-post-visual-editor .btn-link:disabled, .edit-post-visual-editor .btn-link.disabled {
   color: #6c757d;
 }
-.edit-post-visual-editor .btn-lg, .edit-post-visual-editor .btn-group-lg > .btn {
+.edit-post-visual-editor .btn-lg, .edit-post-visual-editor .btn-group-lg > .btn, .edit-post-visual-editor .btn-group-lg > .gform_button {
   padding: 0.5rem 1rem;
   font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 0.3rem;
 }
 @media (min-width: 1200px) {
-  .edit-post-visual-editor .btn-lg, .edit-post-visual-editor .btn-group-lg > .btn {
+  .edit-post-visual-editor .btn-lg, .edit-post-visual-editor .btn-group-lg > .btn, .edit-post-visual-editor .btn-group-lg > .gform_button {
     font-size: 1.40625rem;
   }
 }
-.edit-post-visual-editor .btn-sm, .edit-post-visual-editor .btn-group-sm > .btn {
+.edit-post-visual-editor .btn-sm, .edit-post-visual-editor .btn-group-sm > .btn, .edit-post-visual-editor .btn-group-sm > .gform_button {
   padding: 0.25rem 0.5rem;
   font-size: 0.984375rem;
   border-radius: 0.2rem;
@@ -3474,23 +3477,35 @@ a > .edit-post-visual-editor code {
   display: inline-flex;
   vertical-align: middle;
 }
-.edit-post-visual-editor .btn-group > .btn,
-.edit-post-visual-editor .btn-group-vertical > .btn {
+.edit-post-visual-editor .btn-group > .btn, .edit-post-visual-editor .btn-group > .gform_button,
+.edit-post-visual-editor .btn-group-vertical > .btn,
+.edit-post-visual-editor .btn-group-vertical > .gform_button {
   position: relative;
   flex: 1 1 auto;
 }
-.edit-post-visual-editor .btn-group > .btn-check:checked + .btn,
+.edit-post-visual-editor .btn-group > .btn-check:checked + .btn, .edit-post-visual-editor .btn-group > .btn-check:checked + .gform_button,
 .edit-post-visual-editor .btn-group > .btn-check:focus + .btn,
+.edit-post-visual-editor .btn-group > .btn-check:focus + .gform_button,
 .edit-post-visual-editor .btn-group > .btn:hover,
+.edit-post-visual-editor .btn-group > .gform_button:hover,
 .edit-post-visual-editor .btn-group > .btn:focus,
+.edit-post-visual-editor .btn-group > .gform_button:focus,
 .edit-post-visual-editor .btn-group > .btn:active,
+.edit-post-visual-editor .btn-group > .gform_button:active,
 .edit-post-visual-editor .btn-group > .btn.active,
+.edit-post-visual-editor .btn-group > .active.gform_button,
 .edit-post-visual-editor .btn-group-vertical > .btn-check:checked + .btn,
+.edit-post-visual-editor .btn-group-vertical > .btn-check:checked + .gform_button,
 .edit-post-visual-editor .btn-group-vertical > .btn-check:focus + .btn,
+.edit-post-visual-editor .btn-group-vertical > .btn-check:focus + .gform_button,
 .edit-post-visual-editor .btn-group-vertical > .btn:hover,
+.edit-post-visual-editor .btn-group-vertical > .gform_button:hover,
 .edit-post-visual-editor .btn-group-vertical > .btn:focus,
+.edit-post-visual-editor .btn-group-vertical > .gform_button:focus,
 .edit-post-visual-editor .btn-group-vertical > .btn:active,
-.edit-post-visual-editor .btn-group-vertical > .btn.active {
+.edit-post-visual-editor .btn-group-vertical > .gform_button:active,
+.edit-post-visual-editor .btn-group-vertical > .btn.active,
+.edit-post-visual-editor .btn-group-vertical > .active.gform_button {
   z-index: 1;
 }
 .edit-post-visual-editor .btn-toolbar {
@@ -3501,18 +3516,21 @@ a > .edit-post-visual-editor code {
 .edit-post-visual-editor .btn-toolbar .input-group {
   width: auto;
 }
-.edit-post-visual-editor .btn-group > .btn:not(:first-child),
+.edit-post-visual-editor .btn-group > .btn:not(:first-child), .edit-post-visual-editor .btn-group > .gform_button:not(:first-child),
 .edit-post-visual-editor .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.edit-post-visual-editor .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.edit-post-visual-editor .btn-group > .btn-group:not(:last-child) > .btn {
+.edit-post-visual-editor .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .edit-post-visual-editor .btn-group > .gform_button:not(:last-child):not(.dropdown-toggle),
+.edit-post-visual-editor .btn-group > .btn-group:not(:last-child) > .btn,
+.edit-post-visual-editor .btn-group > .btn-group:not(:last-child) > .gform_button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.edit-post-visual-editor .btn-group > .btn:nth-child(n+3),
+.edit-post-visual-editor .btn-group > .btn:nth-child(n+3), .edit-post-visual-editor .btn-group > .gform_button:nth-child(n+3),
 .edit-post-visual-editor .btn-group > :not(.btn-check) + .btn,
-.edit-post-visual-editor .btn-group > .btn-group:not(:first-child) > .btn {
+.edit-post-visual-editor .btn-group > :not(.btn-check) + .gform_button,
+.edit-post-visual-editor .btn-group > .btn-group:not(:first-child) > .btn,
+.edit-post-visual-editor .btn-group > .btn-group:not(:first-child) > .gform_button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -3526,11 +3544,11 @@ a > .edit-post-visual-editor code {
 .dropstart .edit-post-visual-editor .dropdown-toggle-split::before {
   margin-right: 0;
 }
-.edit-post-visual-editor .btn-sm + .dropdown-toggle-split, .edit-post-visual-editor .btn-group-sm > .btn + .dropdown-toggle-split {
+.edit-post-visual-editor .btn-sm + .dropdown-toggle-split, .edit-post-visual-editor .btn-group-sm > .btn + .dropdown-toggle-split, .edit-post-visual-editor .btn-group-sm > .gform_button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
-.edit-post-visual-editor .btn-lg + .dropdown-toggle-split, .edit-post-visual-editor .btn-group-lg > .btn + .dropdown-toggle-split {
+.edit-post-visual-editor .btn-lg + .dropdown-toggle-split, .edit-post-visual-editor .btn-group-lg > .btn + .dropdown-toggle-split, .edit-post-visual-editor .btn-group-lg > .gform_button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3539,21 +3557,23 @@ a > .edit-post-visual-editor code {
   align-items: flex-start;
   justify-content: center;
 }
-.edit-post-visual-editor .btn-group-vertical > .btn,
+.edit-post-visual-editor .btn-group-vertical > .btn, .edit-post-visual-editor .btn-group-vertical > .gform_button,
 .edit-post-visual-editor .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.edit-post-visual-editor .btn-group-vertical > .btn:not(:first-child),
+.edit-post-visual-editor .btn-group-vertical > .btn:not(:first-child), .edit-post-visual-editor .btn-group-vertical > .gform_button:not(:first-child),
 .edit-post-visual-editor .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.edit-post-visual-editor .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.edit-post-visual-editor .btn-group-vertical > .btn-group:not(:last-child) > .btn {
+.edit-post-visual-editor .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .edit-post-visual-editor .btn-group-vertical > .gform_button:not(:last-child):not(.dropdown-toggle),
+.edit-post-visual-editor .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+.edit-post-visual-editor .btn-group-vertical > .btn-group:not(:last-child) > .gform_button {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.edit-post-visual-editor .btn-group-vertical > .btn ~ .btn,
-.edit-post-visual-editor .btn-group-vertical > .btn-group:not(:first-child) > .btn {
+.edit-post-visual-editor .btn-group-vertical > .btn ~ .btn, .edit-post-visual-editor .btn-group-vertical > .gform_button ~ .btn, .edit-post-visual-editor .btn-group-vertical > .btn ~ .gform_button, .edit-post-visual-editor .btn-group-vertical > .gform_button ~ .gform_button,
+.edit-post-visual-editor .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+.edit-post-visual-editor .btn-group-vertical > .btn-group:not(:first-child) > .gform_button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4497,7 +4517,7 @@ a > .edit-post-visual-editor code {
 .edit-post-visual-editor .badge:empty {
   display: none;
 }
-.edit-post-visual-editor .btn .badge {
+.edit-post-visual-editor .btn .badge, .edit-post-visual-editor .gform_button .badge {
   position: relative;
   top: -1px;
 }
@@ -5814,7 +5834,7 @@ a > .edit-post-visual-editor code {
   background-color: currentColor;
   opacity: 0.5;
 }
-.edit-post-visual-editor .placeholder.btn::before {
+.edit-post-visual-editor .placeholder.btn::before, .edit-post-visual-editor .placeholder.gform_button::before {
   display: inline-block;
   content: "";
 }
@@ -11141,7 +11161,7 @@ a > .edit-post-visual-editor code {
   background-color: #6c757d;
   color: #fefefe;
 }
-.edit-post-visual-editor .btn-primary {
+.edit-post-visual-editor .btn-primary, .edit-post-visual-editor .gform_button {
   background-color: #63a375;
   color: #fefefe;
 }
@@ -13338,7 +13358,7 @@ a > .edit-post-visual-editor code {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.edit-post-visual-editor .btn-check[disabled] + .btn, .edit-post-visual-editor .btn-check:disabled + .btn {
+.edit-post-visual-editor .btn-check[disabled] + .btn, .edit-post-visual-editor .btn-check[disabled] + .gform_button, .edit-post-visual-editor .btn-check:disabled + .btn, .edit-post-visual-editor .btn-check:disabled + .gform_button {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -13513,11 +13533,11 @@ a > .edit-post-visual-editor code {
 .edit-post-visual-editor .input-group > .form-select:focus {
   z-index: 3;
 }
-.edit-post-visual-editor .input-group .btn {
+.edit-post-visual-editor .input-group .btn, .edit-post-visual-editor .input-group .gform_button {
   position: relative;
   z-index: 2;
 }
-.edit-post-visual-editor .input-group .btn:focus {
+.edit-post-visual-editor .input-group .btn:focus, .edit-post-visual-editor .input-group .gform_button:focus {
   z-index: 3;
 }
 .edit-post-visual-editor .input-group-text {
@@ -13537,7 +13557,8 @@ a > .edit-post-visual-editor code {
 .edit-post-visual-editor .input-group-lg > .form-control,
 .edit-post-visual-editor .input-group-lg > .form-select,
 .edit-post-visual-editor .input-group-lg > .input-group-text,
-.edit-post-visual-editor .input-group-lg > .btn {
+.edit-post-visual-editor .input-group-lg > .btn,
+.edit-post-visual-editor .input-group-lg > .gform_button {
   padding: 0.5rem 1rem;
   font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 0.3rem;
@@ -13546,14 +13567,16 @@ a > .edit-post-visual-editor code {
   .edit-post-visual-editor .input-group-lg > .form-control,
 .edit-post-visual-editor .input-group-lg > .form-select,
 .edit-post-visual-editor .input-group-lg > .input-group-text,
-.edit-post-visual-editor .input-group-lg > .btn {
+.edit-post-visual-editor .input-group-lg > .btn,
+.edit-post-visual-editor .input-group-lg > .gform_button {
     font-size: 1.40625rem;
   }
 }
 .edit-post-visual-editor .input-group-sm > .form-control,
 .edit-post-visual-editor .input-group-sm > .form-select,
 .edit-post-visual-editor .input-group-sm > .input-group-text,
-.edit-post-visual-editor .input-group-sm > .btn {
+.edit-post-visual-editor .input-group-sm > .btn,
+.edit-post-visual-editor .input-group-sm > .gform_button {
   padding: 0.25rem 0.5rem;
   font-size: 0.984375rem;
   border-radius: 0.2rem;
@@ -13735,7 +13758,7 @@ a > .edit-post-visual-editor code {
 .edit-post-visual-editor .input-group .form-select.is-invalid:focus {
   z-index: 3;
 }
-.edit-post-visual-editor .btn {
+.edit-post-visual-editor .btn, .edit-post-visual-editor .gform_button {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -13755,46 +13778,46 @@ a > .edit-post-visual-editor code {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .edit-post-visual-editor .btn {
+  .edit-post-visual-editor .btn, .edit-post-visual-editor .gform_button {
     transition: none;
   }
 }
-.edit-post-visual-editor .btn:hover {
+.edit-post-visual-editor .btn:hover, .edit-post-visual-editor .gform_button:hover {
   color: #212529;
 }
-.btn-check:focus + .edit-post-visual-editor .btn, .edit-post-visual-editor .btn:focus {
+.btn-check:focus + .edit-post-visual-editor .btn, .btn-check:focus + .edit-post-visual-editor .gform_button, .edit-post-visual-editor .btn:focus, .edit-post-visual-editor .gform_button:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(99, 163, 117, 0.25);
 }
-.edit-post-visual-editor .btn:disabled, .edit-post-visual-editor .btn.disabled, fieldset:disabled .edit-post-visual-editor .btn {
+.edit-post-visual-editor .btn:disabled, .edit-post-visual-editor .gform_button:disabled, .edit-post-visual-editor .btn.disabled, .edit-post-visual-editor .disabled.gform_button, fieldset:disabled .edit-post-visual-editor .btn, fieldset:disabled .edit-post-visual-editor .gform_button {
   pointer-events: none;
   opacity: 0.65;
 }
-.edit-post-visual-editor .btn-primary {
+.edit-post-visual-editor .btn-primary, .edit-post-visual-editor .gform_button {
   color: #000;
   background-color: #63a375;
   border-color: #63a375;
 }
-.edit-post-visual-editor .btn-primary:hover {
+.edit-post-visual-editor .btn-primary:hover, .edit-post-visual-editor .gform_button:hover {
   color: #000;
   background-color: #7ab18a;
   border-color: #73ac83;
 }
-.btn-check:focus + .edit-post-visual-editor .btn-primary, .edit-post-visual-editor .btn-primary:focus {
+.btn-check:focus + .edit-post-visual-editor .btn-primary, .btn-check:focus + .edit-post-visual-editor .gform_button, .edit-post-visual-editor .btn-primary:focus, .edit-post-visual-editor .gform_button:focus {
   color: #000;
   background-color: #7ab18a;
   border-color: #73ac83;
   box-shadow: 0 0 0 0.25rem rgba(84, 139, 99, 0.5);
 }
-.btn-check:checked + .edit-post-visual-editor .btn-primary, .btn-check:active + .edit-post-visual-editor .btn-primary, .edit-post-visual-editor .btn-primary:active, .edit-post-visual-editor .btn-primary.active, .show > .edit-post-visual-editor .btn-primary.dropdown-toggle {
+.btn-check:checked + .edit-post-visual-editor .btn-primary, .btn-check:checked + .edit-post-visual-editor .gform_button, .btn-check:active + .edit-post-visual-editor .btn-primary, .btn-check:active + .edit-post-visual-editor .gform_button, .edit-post-visual-editor .btn-primary:active, .edit-post-visual-editor .gform_button:active, .edit-post-visual-editor .btn-primary.active, .edit-post-visual-editor .active.gform_button, .show > .edit-post-visual-editor .btn-primary.dropdown-toggle, .show > .edit-post-visual-editor .dropdown-toggle.gform_button {
   color: #000;
   background-color: #82b591;
   border-color: #73ac83;
 }
-.btn-check:checked + .edit-post-visual-editor .btn-primary:focus, .btn-check:active + .edit-post-visual-editor .btn-primary:focus, .edit-post-visual-editor .btn-primary:active:focus, .edit-post-visual-editor .btn-primary.active:focus, .show > .edit-post-visual-editor .btn-primary.dropdown-toggle:focus {
+.btn-check:checked + .edit-post-visual-editor .btn-primary:focus, .btn-check:checked + .edit-post-visual-editor .gform_button:focus, .btn-check:active + .edit-post-visual-editor .btn-primary:focus, .btn-check:active + .edit-post-visual-editor .gform_button:focus, .edit-post-visual-editor .btn-primary:active:focus, .edit-post-visual-editor .gform_button:active:focus, .edit-post-visual-editor .btn-primary.active:focus, .edit-post-visual-editor .active.gform_button:focus, .show > .edit-post-visual-editor .btn-primary.dropdown-toggle:focus, .show > .edit-post-visual-editor .dropdown-toggle.gform_button:focus {
   box-shadow: 0 0 0 0.25rem rgba(84, 139, 99, 0.5);
 }
-.edit-post-visual-editor .btn-primary:disabled, .edit-post-visual-editor .btn-primary.disabled {
+.edit-post-visual-editor .btn-primary:disabled, .edit-post-visual-editor .gform_button:disabled, .edit-post-visual-editor .btn-primary.disabled, .edit-post-visual-editor .disabled.gform_button {
   color: #000;
   background-color: #63a375;
   border-color: #63a375;
@@ -14152,17 +14175,17 @@ a > .edit-post-visual-editor code {
 .edit-post-visual-editor .btn-link:disabled, .edit-post-visual-editor .btn-link.disabled {
   color: #6c757d;
 }
-.edit-post-visual-editor .btn-lg, .edit-post-visual-editor .btn-group-lg > .btn {
+.edit-post-visual-editor .btn-lg, .edit-post-visual-editor .btn-group-lg > .btn, .edit-post-visual-editor .btn-group-lg > .gform_button {
   padding: 0.5rem 1rem;
   font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 0.3rem;
 }
 @media (min-width: 1200px) {
-  .edit-post-visual-editor .btn-lg, .edit-post-visual-editor .btn-group-lg > .btn {
+  .edit-post-visual-editor .btn-lg, .edit-post-visual-editor .btn-group-lg > .btn, .edit-post-visual-editor .btn-group-lg > .gform_button {
     font-size: 1.40625rem;
   }
 }
-.edit-post-visual-editor .btn-sm, .edit-post-visual-editor .btn-group-sm > .btn {
+.edit-post-visual-editor .btn-sm, .edit-post-visual-editor .btn-group-sm > .btn, .edit-post-visual-editor .btn-group-sm > .gform_button {
   padding: 0.25rem 0.5rem;
   font-size: 0.984375rem;
   border-radius: 0.2rem;
@@ -14494,23 +14517,35 @@ a > .edit-post-visual-editor code {
   display: inline-flex;
   vertical-align: middle;
 }
-.edit-post-visual-editor .btn-group > .btn,
-.edit-post-visual-editor .btn-group-vertical > .btn {
+.edit-post-visual-editor .btn-group > .btn, .edit-post-visual-editor .btn-group > .gform_button,
+.edit-post-visual-editor .btn-group-vertical > .btn,
+.edit-post-visual-editor .btn-group-vertical > .gform_button {
   position: relative;
   flex: 1 1 auto;
 }
-.edit-post-visual-editor .btn-group > .btn-check:checked + .btn,
+.edit-post-visual-editor .btn-group > .btn-check:checked + .btn, .edit-post-visual-editor .btn-group > .btn-check:checked + .gform_button,
 .edit-post-visual-editor .btn-group > .btn-check:focus + .btn,
+.edit-post-visual-editor .btn-group > .btn-check:focus + .gform_button,
 .edit-post-visual-editor .btn-group > .btn:hover,
+.edit-post-visual-editor .btn-group > .gform_button:hover,
 .edit-post-visual-editor .btn-group > .btn:focus,
+.edit-post-visual-editor .btn-group > .gform_button:focus,
 .edit-post-visual-editor .btn-group > .btn:active,
+.edit-post-visual-editor .btn-group > .gform_button:active,
 .edit-post-visual-editor .btn-group > .btn.active,
+.edit-post-visual-editor .btn-group > .active.gform_button,
 .edit-post-visual-editor .btn-group-vertical > .btn-check:checked + .btn,
+.edit-post-visual-editor .btn-group-vertical > .btn-check:checked + .gform_button,
 .edit-post-visual-editor .btn-group-vertical > .btn-check:focus + .btn,
+.edit-post-visual-editor .btn-group-vertical > .btn-check:focus + .gform_button,
 .edit-post-visual-editor .btn-group-vertical > .btn:hover,
+.edit-post-visual-editor .btn-group-vertical > .gform_button:hover,
 .edit-post-visual-editor .btn-group-vertical > .btn:focus,
+.edit-post-visual-editor .btn-group-vertical > .gform_button:focus,
 .edit-post-visual-editor .btn-group-vertical > .btn:active,
-.edit-post-visual-editor .btn-group-vertical > .btn.active {
+.edit-post-visual-editor .btn-group-vertical > .gform_button:active,
+.edit-post-visual-editor .btn-group-vertical > .btn.active,
+.edit-post-visual-editor .btn-group-vertical > .active.gform_button {
   z-index: 1;
 }
 .edit-post-visual-editor .btn-toolbar {
@@ -14521,18 +14556,21 @@ a > .edit-post-visual-editor code {
 .edit-post-visual-editor .btn-toolbar .input-group {
   width: auto;
 }
-.edit-post-visual-editor .btn-group > .btn:not(:first-child),
+.edit-post-visual-editor .btn-group > .btn:not(:first-child), .edit-post-visual-editor .btn-group > .gform_button:not(:first-child),
 .edit-post-visual-editor .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.edit-post-visual-editor .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.edit-post-visual-editor .btn-group > .btn-group:not(:last-child) > .btn {
+.edit-post-visual-editor .btn-group > .btn:not(:last-child):not(.dropdown-toggle), .edit-post-visual-editor .btn-group > .gform_button:not(:last-child):not(.dropdown-toggle),
+.edit-post-visual-editor .btn-group > .btn-group:not(:last-child) > .btn,
+.edit-post-visual-editor .btn-group > .btn-group:not(:last-child) > .gform_button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.edit-post-visual-editor .btn-group > .btn:nth-child(n+3),
+.edit-post-visual-editor .btn-group > .btn:nth-child(n+3), .edit-post-visual-editor .btn-group > .gform_button:nth-child(n+3),
 .edit-post-visual-editor .btn-group > :not(.btn-check) + .btn,
-.edit-post-visual-editor .btn-group > .btn-group:not(:first-child) > .btn {
+.edit-post-visual-editor .btn-group > :not(.btn-check) + .gform_button,
+.edit-post-visual-editor .btn-group > .btn-group:not(:first-child) > .btn,
+.edit-post-visual-editor .btn-group > .btn-group:not(:first-child) > .gform_button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -14546,11 +14584,11 @@ a > .edit-post-visual-editor code {
 .dropstart .edit-post-visual-editor .dropdown-toggle-split::before {
   margin-right: 0;
 }
-.edit-post-visual-editor .btn-sm + .dropdown-toggle-split, .edit-post-visual-editor .btn-group-sm > .btn + .dropdown-toggle-split {
+.edit-post-visual-editor .btn-sm + .dropdown-toggle-split, .edit-post-visual-editor .btn-group-sm > .btn + .dropdown-toggle-split, .edit-post-visual-editor .btn-group-sm > .gform_button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
-.edit-post-visual-editor .btn-lg + .dropdown-toggle-split, .edit-post-visual-editor .btn-group-lg > .btn + .dropdown-toggle-split {
+.edit-post-visual-editor .btn-lg + .dropdown-toggle-split, .edit-post-visual-editor .btn-group-lg > .btn + .dropdown-toggle-split, .edit-post-visual-editor .btn-group-lg > .gform_button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -14559,21 +14597,23 @@ a > .edit-post-visual-editor code {
   align-items: flex-start;
   justify-content: center;
 }
-.edit-post-visual-editor .btn-group-vertical > .btn,
+.edit-post-visual-editor .btn-group-vertical > .btn, .edit-post-visual-editor .btn-group-vertical > .gform_button,
 .edit-post-visual-editor .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.edit-post-visual-editor .btn-group-vertical > .btn:not(:first-child),
+.edit-post-visual-editor .btn-group-vertical > .btn:not(:first-child), .edit-post-visual-editor .btn-group-vertical > .gform_button:not(:first-child),
 .edit-post-visual-editor .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.edit-post-visual-editor .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.edit-post-visual-editor .btn-group-vertical > .btn-group:not(:last-child) > .btn {
+.edit-post-visual-editor .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .edit-post-visual-editor .btn-group-vertical > .gform_button:not(:last-child):not(.dropdown-toggle),
+.edit-post-visual-editor .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+.edit-post-visual-editor .btn-group-vertical > .btn-group:not(:last-child) > .gform_button {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.edit-post-visual-editor .btn-group-vertical > .btn ~ .btn,
-.edit-post-visual-editor .btn-group-vertical > .btn-group:not(:first-child) > .btn {
+.edit-post-visual-editor .btn-group-vertical > .btn ~ .btn, .edit-post-visual-editor .btn-group-vertical > .gform_button ~ .btn, .edit-post-visual-editor .btn-group-vertical > .btn ~ .gform_button, .edit-post-visual-editor .btn-group-vertical > .gform_button ~ .gform_button,
+.edit-post-visual-editor .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+.edit-post-visual-editor .btn-group-vertical > .btn-group:not(:first-child) > .gform_button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -15517,7 +15557,7 @@ a > .edit-post-visual-editor code {
 .edit-post-visual-editor .badge:empty {
   display: none;
 }
-.edit-post-visual-editor .btn .badge {
+.edit-post-visual-editor .btn .badge, .edit-post-visual-editor .gform_button .badge {
   position: relative;
   top: -1px;
 }
@@ -16834,7 +16874,7 @@ a > .edit-post-visual-editor code {
   background-color: currentColor;
   opacity: 0.5;
 }
-.edit-post-visual-editor .placeholder.btn::before {
+.edit-post-visual-editor .placeholder.btn::before, .edit-post-visual-editor .placeholder.gform_button::before {
   display: inline-block;
   content: "";
 }
@@ -26118,7 +26158,7 @@ a > .edit-post-visual-editor code {
     font-size: 50px;
   }
 }
-.edit-post-visual-editor .inner-slide .btn {
+.edit-post-visual-editor .inner-slide .btn, .edit-post-visual-editor .inner-slide .gform_button {
   border-radius: 2.222rem;
   color: #fff;
 }
@@ -26188,7 +26228,8 @@ a > .edit-post-visual-editor code {
 }
 
 .wp-block-button,
-.btn {
+.btn,
+.edit-post-visual-editor .gform_button {
   border: 0.111rem solid transparent;
   border-radius: 2rem;
   cursor: pointer;
@@ -26214,7 +26255,7 @@ a > .edit-post-visual-editor code {
   color: #fefefe;
 }
 
-.btn-primary {
+.btn-primary, .edit-post-visual-editor .gform_button {
   background-color: #63a375;
   color: #fefefe;
 }

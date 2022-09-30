@@ -2615,7 +2615,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check:disabled + .btn {
+.btn-check[disabled] + .btn, .btn-check[disabled] + .gform_button, .btn-check:disabled + .btn, .btn-check:disabled + .gform_button {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2793,11 +2793,11 @@ textarea.form-control-lg {
 .input-group > .form-select:focus {
   z-index: 3;
 }
-.input-group .btn {
+.input-group .btn, .input-group .gform_button {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus {
+.input-group .btn:focus, .input-group .gform_button:focus {
   z-index: 3;
 }
 
@@ -2819,7 +2819,8 @@ textarea.form-control-lg {
 .input-group-lg > .form-control,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg > .btn,
+.input-group-lg > .gform_button {
   padding: 0.5rem 1rem;
   font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 0.3rem;
@@ -2828,7 +2829,8 @@ textarea.form-control-lg {
   .input-group-lg > .form-control,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg > .btn,
+.input-group-lg > .gform_button {
     font-size: 1.40625rem;
   }
 }
@@ -2836,7 +2838,8 @@ textarea.form-control-lg {
 .input-group-sm > .form-control,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
-.input-group-sm > .btn {
+.input-group-sm > .btn,
+.input-group-sm > .gform_button {
   padding: 0.25rem 0.5rem;
   font-size: 0.984375rem;
   border-radius: 0.2rem;
@@ -3041,7 +3044,7 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-.btn {
+.btn, .gform_button {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -3061,47 +3064,47 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  .btn, .gform_button {
     transition: none;
   }
 }
-.btn:hover {
+.btn:hover, .gform_button:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .btn:focus {
+.btn-check:focus + .btn, .btn-check:focus + .gform_button, .btn:focus, .gform_button:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(99, 163, 117, 0.25);
 }
-.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+.btn:disabled, .gform_button:disabled, .btn.disabled, .disabled.gform_button, fieldset:disabled .btn, fieldset:disabled .gform_button {
   pointer-events: none;
   opacity: 0.65;
 }
 
-.btn-primary {
+.btn-primary, .gform_button {
   color: #000;
   background-color: #63a375;
   border-color: #63a375;
 }
-.btn-primary:hover {
+.btn-primary:hover, .gform_button:hover {
   color: #000;
   background-color: #7ab18a;
   border-color: #73ac83;
 }
-.btn-check:focus + .btn-primary, .btn-primary:focus {
+.btn-check:focus + .btn-primary, .btn-check:focus + .gform_button, .btn-primary:focus, .gform_button:focus {
   color: #000;
   background-color: #7ab18a;
   border-color: #73ac83;
   box-shadow: 0 0 0 0.25rem rgba(84, 139, 99, 0.5);
 }
-.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+.btn-check:checked + .btn-primary, .btn-check:checked + .gform_button, .btn-check:active + .btn-primary, .btn-check:active + .gform_button, .btn-primary:active, .gform_button:active, .btn-primary.active, .active.gform_button, .show > .btn-primary.dropdown-toggle, .show > .dropdown-toggle.gform_button {
   color: #000;
   background-color: #82b591;
   border-color: #73ac83;
 }
-.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+.btn-check:checked + .btn-primary:focus, .btn-check:checked + .gform_button:focus, .btn-check:active + .btn-primary:focus, .btn-check:active + .gform_button:focus, .btn-primary:active:focus, .gform_button:active:focus, .btn-primary.active:focus, .active.gform_button:focus, .show > .btn-primary.dropdown-toggle:focus, .show > .dropdown-toggle.gform_button:focus {
   box-shadow: 0 0 0 0.25rem rgba(84, 139, 99, 0.5);
 }
-.btn-primary:disabled, .btn-primary.disabled {
+.btn-primary:disabled, .gform_button:disabled, .btn-primary.disabled, .disabled.gform_button {
   color: #000;
   background-color: #63a375;
   border-color: #63a375;
@@ -3474,18 +3477,18 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .gform_button {
   padding: 0.5rem 1rem;
   font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 0.3rem;
 }
 @media (min-width: 1200px) {
-  .btn-lg, .btn-group-lg > .btn {
+  .btn-lg, .btn-group-lg > .btn, .btn-group-lg > .gform_button {
     font-size: 1.40625rem;
   }
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .gform_button {
   padding: 0.25rem 0.5rem;
   font-size: 0.984375rem;
   border-radius: 0.2rem;
@@ -3840,23 +3843,35 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, .btn-group > .gform_button,
+.btn-group-vertical > .btn,
+.btn-group-vertical > .gform_button {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn,
+.btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .gform_button,
 .btn-group > .btn-check:focus + .btn,
+.btn-group > .btn-check:focus + .gform_button,
 .btn-group > .btn:hover,
+.btn-group > .gform_button:hover,
 .btn-group > .btn:focus,
+.btn-group > .gform_button:focus,
 .btn-group > .btn:active,
+.btn-group > .gform_button:active,
 .btn-group > .btn.active,
+.btn-group > .active.gform_button,
 .btn-group-vertical > .btn-check:checked + .btn,
+.btn-group-vertical > .btn-check:checked + .gform_button,
 .btn-group-vertical > .btn-check:focus + .btn,
+.btn-group-vertical > .btn-check:focus + .gform_button,
 .btn-group-vertical > .btn:hover,
+.btn-group-vertical > .gform_button:hover,
 .btn-group-vertical > .btn:focus,
+.btn-group-vertical > .gform_button:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
+.btn-group-vertical > .gform_button:active,
+.btn-group-vertical > .btn.active,
+.btn-group-vertical > .active.gform_button {
   z-index: 1;
 }
 
@@ -3869,18 +3884,21 @@ textarea.form-control-lg {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .gform_button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .gform_button:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+.btn-group > .btn-group:not(:last-child) > .gform_button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .btn-group > .gform_button:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group > :not(.btn-check) + .gform_button,
+.btn-group > .btn-group:not(:first-child) > .btn,
+.btn-group > .btn-group:not(:first-child) > .gform_button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -3896,12 +3914,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .gform_button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .gform_button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3911,21 +3929,23 @@ textarea.form-control-lg {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, .btn-group-vertical > .gform_button,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .gform_button:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .gform_button:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn,
+.btn-group-vertical > .btn-group:not(:last-child) > .gform_button {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .gform_button ~ .btn, .btn-group-vertical > .btn ~ .gform_button, .btn-group-vertical > .gform_button ~ .gform_button,
+.btn-group-vertical > .btn-group:not(:first-child) > .btn,
+.btn-group-vertical > .btn-group:not(:first-child) > .gform_button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4917,7 +4937,7 @@ textarea.form-control-lg {
   display: none;
 }
 
-.btn .badge {
+.btn .badge, .gform_button .badge {
   position: relative;
   top: -1px;
 }
@@ -6337,7 +6357,7 @@ textarea.form-control-lg {
   background-color: currentColor;
   opacity: 0.5;
 }
-.placeholder.btn::before {
+.placeholder.btn::before, .placeholder.gform_button::before {
   display: inline-block;
   content: "";
 }
@@ -13282,7 +13302,7 @@ h1, h2, h3, h4, h5, h6,
   color: #f8f9fa;
 }
 
-.btn-primary {
+.btn-primary, .gform_button {
   background-color: #63a375;
   color: #f8f9fa;
 }
@@ -15890,7 +15910,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check:disabled + .btn {
+.btn-check[disabled] + .btn, .btn-check[disabled] + .gform_button, .btn-check:disabled + .btn, .btn-check:disabled + .gform_button {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -16068,11 +16088,11 @@ textarea.form-control-lg {
 .input-group > .form-select:focus {
   z-index: 3;
 }
-.input-group .btn {
+.input-group .btn, .input-group .gform_button {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus {
+.input-group .btn:focus, .input-group .gform_button:focus {
   z-index: 3;
 }
 
@@ -16094,7 +16114,8 @@ textarea.form-control-lg {
 .input-group-lg > .form-control,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg > .btn,
+.input-group-lg > .gform_button {
   padding: 0.5rem 1rem;
   font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 0.3rem;
@@ -16103,7 +16124,8 @@ textarea.form-control-lg {
   .input-group-lg > .form-control,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg > .btn,
+.input-group-lg > .gform_button {
     font-size: 1.40625rem;
   }
 }
@@ -16111,7 +16133,8 @@ textarea.form-control-lg {
 .input-group-sm > .form-control,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
-.input-group-sm > .btn {
+.input-group-sm > .btn,
+.input-group-sm > .gform_button {
   padding: 0.25rem 0.5rem;
   font-size: 0.984375rem;
   border-radius: 0.2rem;
@@ -16316,7 +16339,7 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-.btn {
+.btn, .gform_button {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -16336,47 +16359,47 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  .btn, .gform_button {
     transition: none;
   }
 }
-.btn:hover {
+.btn:hover, .gform_button:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .btn:focus {
+.btn-check:focus + .btn, .btn-check:focus + .gform_button, .btn:focus, .gform_button:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(99, 163, 117, 0.25);
 }
-.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+.btn:disabled, .gform_button:disabled, .btn.disabled, .disabled.gform_button, fieldset:disabled .btn, fieldset:disabled .gform_button {
   pointer-events: none;
   opacity: 0.65;
 }
 
-.btn-primary {
+.btn-primary, .gform_button {
   color: #000;
   background-color: #63a375;
   border-color: #63a375;
 }
-.btn-primary:hover {
+.btn-primary:hover, .gform_button:hover {
   color: #000;
   background-color: #7ab18a;
   border-color: #73ac83;
 }
-.btn-check:focus + .btn-primary, .btn-primary:focus {
+.btn-check:focus + .btn-primary, .btn-check:focus + .gform_button, .btn-primary:focus, .gform_button:focus {
   color: #000;
   background-color: #7ab18a;
   border-color: #73ac83;
   box-shadow: 0 0 0 0.25rem rgba(84, 139, 99, 0.5);
 }
-.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+.btn-check:checked + .btn-primary, .btn-check:checked + .gform_button, .btn-check:active + .btn-primary, .btn-check:active + .gform_button, .btn-primary:active, .gform_button:active, .btn-primary.active, .active.gform_button, .show > .btn-primary.dropdown-toggle, .show > .dropdown-toggle.gform_button {
   color: #000;
   background-color: #82b591;
   border-color: #73ac83;
 }
-.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+.btn-check:checked + .btn-primary:focus, .btn-check:checked + .gform_button:focus, .btn-check:active + .btn-primary:focus, .btn-check:active + .gform_button:focus, .btn-primary:active:focus, .gform_button:active:focus, .btn-primary.active:focus, .active.gform_button:focus, .show > .btn-primary.dropdown-toggle:focus, .show > .dropdown-toggle.gform_button:focus {
   box-shadow: 0 0 0 0.25rem rgba(84, 139, 99, 0.5);
 }
-.btn-primary:disabled, .btn-primary.disabled {
+.btn-primary:disabled, .gform_button:disabled, .btn-primary.disabled, .disabled.gform_button {
   color: #000;
   background-color: #63a375;
   border-color: #63a375;
@@ -16749,18 +16772,18 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .gform_button {
   padding: 0.5rem 1rem;
   font-size: calc(1.265625rem + 0.1875vw);
   border-radius: 0.3rem;
 }
 @media (min-width: 1200px) {
-  .btn-lg, .btn-group-lg > .btn {
+  .btn-lg, .btn-group-lg > .btn, .btn-group-lg > .gform_button {
     font-size: 1.40625rem;
   }
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .gform_button {
   padding: 0.25rem 0.5rem;
   font-size: 0.984375rem;
   border-radius: 0.2rem;
@@ -17115,23 +17138,35 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, .btn-group > .gform_button,
+.btn-group-vertical > .btn,
+.btn-group-vertical > .gform_button {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn,
+.btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .gform_button,
 .btn-group > .btn-check:focus + .btn,
+.btn-group > .btn-check:focus + .gform_button,
 .btn-group > .btn:hover,
+.btn-group > .gform_button:hover,
 .btn-group > .btn:focus,
+.btn-group > .gform_button:focus,
 .btn-group > .btn:active,
+.btn-group > .gform_button:active,
 .btn-group > .btn.active,
+.btn-group > .active.gform_button,
 .btn-group-vertical > .btn-check:checked + .btn,
+.btn-group-vertical > .btn-check:checked + .gform_button,
 .btn-group-vertical > .btn-check:focus + .btn,
+.btn-group-vertical > .btn-check:focus + .gform_button,
 .btn-group-vertical > .btn:hover,
+.btn-group-vertical > .gform_button:hover,
 .btn-group-vertical > .btn:focus,
+.btn-group-vertical > .gform_button:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
+.btn-group-vertical > .gform_button:active,
+.btn-group-vertical > .btn.active,
+.btn-group-vertical > .active.gform_button {
   z-index: 1;
 }
 
@@ -17144,18 +17179,21 @@ textarea.form-control-lg {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .gform_button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .gform_button:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+.btn-group > .btn-group:not(:last-child) > .gform_button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .btn-group > .gform_button:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group > :not(.btn-check) + .gform_button,
+.btn-group > .btn-group:not(:first-child) > .btn,
+.btn-group > .btn-group:not(:first-child) > .gform_button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -17171,12 +17209,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .gform_button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .gform_button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -17186,21 +17224,23 @@ textarea.form-control-lg {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, .btn-group-vertical > .gform_button,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .gform_button:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .gform_button:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn,
+.btn-group-vertical > .btn-group:not(:last-child) > .gform_button {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .gform_button ~ .btn, .btn-group-vertical > .btn ~ .gform_button, .btn-group-vertical > .gform_button ~ .gform_button,
+.btn-group-vertical > .btn-group:not(:first-child) > .btn,
+.btn-group-vertical > .btn-group:not(:first-child) > .gform_button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -18192,7 +18232,7 @@ textarea.form-control-lg {
   display: none;
 }
 
-.btn .badge {
+.btn .badge, .gform_button .badge {
   position: relative;
   top: -1px;
 }
@@ -19612,7 +19652,7 @@ textarea.form-control-lg {
   background-color: currentColor;
   opacity: 0.5;
 }
-.placeholder.btn::before {
+.placeholder.btn::before, .placeholder.gform_button::before {
   display: inline-block;
   content: "";
 }
@@ -31270,7 +31310,7 @@ footer.page-footer div[itemprop=address] span[itemprop=telephone] {
     font-size: 50px;
   }
 }
-.inner-slide .btn {
+.inner-slide .btn, .inner-slide .gform_button {
   border-radius: 2.222rem;
   color: #fff;
 }
