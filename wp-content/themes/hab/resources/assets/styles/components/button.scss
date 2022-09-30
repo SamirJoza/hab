@@ -16,12 +16,12 @@
 .gform_button {
   @extend .btn;
   @extend .btn-primary;
-  color: $white;
-  padding-left: 64px;
-  padding-right: 64px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  border-radius: 2rem;
+  color: $white !important;
+  padding-left: 64px !important;
+  padding-right: 64px !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  border-radius: 2rem !important;
 }
 
 .gform_validation_errors,
