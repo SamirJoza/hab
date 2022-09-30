@@ -11165,6 +11165,18 @@ a > .edit-post-visual-editor code {
   background-color: #63a375;
   color: #fefefe;
 }
+.edit-post-visual-editor .gform_button {
+  color: #fff;
+  padding-left: 64px;
+  padding-right: 64px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 2rem;
+}
+.edit-post-visual-editor .gform_validation_errors,
+.edit-post-visual-editor .validation_message {
+  display: none;
+}
 .edit-post-visual-editor :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
