@@ -11166,12 +11166,12 @@ a > .edit-post-visual-editor code {
   color: #fefefe;
 }
 .edit-post-visual-editor .gform_button {
-  color: #fff;
-  padding-left: 64px;
-  padding-right: 64px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  border-radius: 2rem;
+  color: #fff !important;
+  padding-left: 64px !important;
+  padding-right: 64px !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  border-radius: 2rem !important;
 }
 .edit-post-visual-editor .gform_validation_errors,
 .edit-post-visual-editor .validation_message {

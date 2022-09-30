@@ -13308,12 +13308,12 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .gform_button {
-  color: #fff;
-  padding-left: 64px;
-  padding-right: 64px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  border-radius: 2rem;
+  color: #fff !important;
+  padding-left: 64px !important;
+  padding-right: 64px !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  border-radius: 2rem !important;
 }
 
 .gform_validation_errors,
