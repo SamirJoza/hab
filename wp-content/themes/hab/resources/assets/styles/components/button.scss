@@ -12,3 +12,8 @@
   background-color: $primary;
   color: $light;
 }
+
+.gform_button {
+  @extend .btn;
+  @extend .btn-primary;
+}
